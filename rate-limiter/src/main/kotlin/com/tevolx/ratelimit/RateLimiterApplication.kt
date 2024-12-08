@@ -1,4 +1,4 @@
-package com.tevolx.ratelimiter
+package com.tevolx.ratelimit
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
