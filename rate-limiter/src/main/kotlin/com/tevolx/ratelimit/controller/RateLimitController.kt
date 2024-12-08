@@ -13,9 +13,8 @@ class RateLimitController{
 
     @GetMapping("/leaky-bucket")
     fun leakyBucket(): ResponseEntity<RateLimitResponse> {
-        Thread.sleep(500)
         return ResponseEntity
-            .ok()
-            .body(RateLimitResponse(HttpStatus.OK,HttpStatus.OK.reasonPhrase))
+            .status(HttpStatus.OK)
+            .body(RateLimitResponse(HttpStatus.OK.value(), HttpStatus.OK.reasonPhrase))
     }
 }
